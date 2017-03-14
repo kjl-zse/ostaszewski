@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private static File getOutputMediaFile() {
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "Apteka");
         if (!mediaStorageDir.exists()) {
+            mediaStorageDir.mkdir();
             if (!mediaStorageDir.mkdirs()) {
                 Log.d("Apteka", "problem z utworzeniem katalogu");
                 return null;
